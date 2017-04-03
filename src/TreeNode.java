@@ -47,8 +47,8 @@ public class TreeNode {
      */
     public void setLeft(TreeNode left) {
         //just some debugging if we are adding the values incorrectly
-        if(left.getValue() >= this.getValue())
-            System.out.println("WARNING: You are adding a value incorrectly (left) to node "+this.getValue());
+//        if(left.getValue() >= this.getValue())
+//            System.out.println("WARNING: You are adding a value incorrectly (left) to node ");
         this.left = left;
     }
 
@@ -66,8 +66,8 @@ public class TreeNode {
      */
     public void setRight(TreeNode right) {
         //just some debugging if we are adding the values incorrectly
-        if(right.getValue() < this.getValue())
-            System.out.println("WARNING: You are adding a value incorrectly (right) to node "+this.getValue());
+//        if(right.getValue() < this.getValue())
+//            System.out.println("WARNING: You are adding a value incorrectly (right) to node "+this.getValue());
 
         this.right = right;
     }

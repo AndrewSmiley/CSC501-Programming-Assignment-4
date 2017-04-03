@@ -50,7 +50,7 @@
 //                view.setStatus(key + " is already in the tree");
 //            }
 //            else {
-//                tree.insert(key); // Insert a new key
+//                tree.insertRecursive(key); // Insert a new key
 //                view.displayTree();
 //                view.setStatus(key + " is inserted in the tree");
 //            }

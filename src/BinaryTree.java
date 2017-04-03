@@ -20,24 +20,56 @@ public class BinaryTree {
     }
 
     /**
-     * This is our recursive search function
-     * @param tree
+     * This is our insertion starter function. This method calls insertrecursive, which is our actual tree traversal
      * @param value
-     * @return
      */
-    public TreeNode insert(TreeNode tree, int value) {
+    public void insert(int value){
+        this.root = insertRecursive(this.root, value); //do the insertion and update the tree
+        size++;
+    }
 
-        if(tree == null) return new TreeNode(value);
+    /**
+     * This is our recursive insertion function. This will be called by our actual insertRecursive() function. Traverse the tree
+     * and try to determine where to place the value
+     * @param tree the starting tree or subtree
+     * @param value the value to insertRecursive
+     * @return the updated tree
+     */
+    public TreeNode insertRecursive(TreeNode tree, int value) {
+
+        //if we are working with a null tree, go ahead and drop the new value at the top
+        if(tree == null) {
+            return new TreeNode(value);
+        }
+        //otherwise, logically determine whether we should inch down to the left or the right
         else if(value<tree.getValue( )) {
-            tree.setLeft(insert(tree.getLeft( ), value));
+            //set the left subtree to the final result. essentially, this recursion will ultimately return the whole
+            //binary tree
+            tree.setLeft(insertRecursive(tree.getLeft(), value));
+
             return tree;
         }
             else {
-                tree.setRight(insert(tree.getRight( ),value));
+            //set the right subtree and recurse to the final result. essentially, this recursion will ultimately return the whole
+            //binary tree
+                tree.setRight(insertRecursive(tree.getRight(), value));
+
                 return tree;
         }
     }
 
+
+    /**
+     * This is our delete starter method, this method will call the deleteRecursive method, we use this as a starter method
+     * and pass in the root of our binary tree and our value to insert
+     * @param value the value we want to delete
+     */
+    public void delete(int value){
+        //update the binary tree as a whole
+        this.root = this.deleteRecursive(value, this.root); //the value to delete into the binary tree
+        size--;//decrease the size
+
+    }
     /**
      * This is our  actual delete function
      * @param value the value we wish to deleteRecursive
@@ -82,10 +114,12 @@ public class BinaryTree {
             //if we make it down here, then here's the thing, we need to continue recursing
             //Just do a logical check to determine where to inch down to the left or the right depending upon how we want to
             if(value<node.getValue()) {
-                node.setLeft(deleteRecursive(value, node.getLeft()));    return node;
+                node.setLeft(deleteRecursive(value, node.getLeft()));
+                return node;
             }
             else {
-                node.setRight(deleteRecursive(value, node.getRight()));    return node;
+                node.setRight(deleteRecursive(value, node.getRight()));
+                return node;
             }
         }
 

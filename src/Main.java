@@ -21,7 +21,7 @@ public class Main {
             int lineCount = 0;
             while ((line = br.readLine()) != null) {
                 numbers.add(Integer.parseInt(line));
-//                tree.root = tree.insert(tree.root, Integer.parseInt(line));
+//                tree.root = tree.insertRecursive(tree.root, Integer.parseInt(line));
 //                numbers[lineCount - 1] = Integer.parseInt(line);
 
             }
@@ -35,7 +35,7 @@ public class Main {
 
         //add the numbers from the array into the binary tree
         for (Integer i : numbers) {
-            tree.root = tree.insert(tree.root, i);
+            tree.insert(i);
         }
 
         //output size and height
@@ -74,7 +74,7 @@ public class Main {
          *size and height of the tree
          * */
         for (int i = 0; i < numbers.size(); i = i + 4) {
-            tree.deleteRecursive(numbers.get(i), tree.root);
+            tree.delete(numbers.get(i));
             System.out.println("Deleting: " + numbers.get(i) + "\t\tSize: " + tree.getSize() + "\t\tHeight: " + tree.getHeight());
 
         }

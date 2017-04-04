@@ -1,0 +1,16 @@
+Size: 20		Height: 8
+Preorder: 163 37 15 3 4 32 22 34 56 68 57 71 101 78 90 102 342 202 344 561 
+Inorder: 3 4 15 22 32 34 37 56 57 68 71 78 90 101 102 163 202 342 344 561 
+Postorder: 4 3 22 34 32 15 57 90 78 102 101 71 68 56 37 202 561 344 342 163 
+Deleting: 163		Size: 19		Height: 8
+Deleting: 37		Size: 18		Height: 7
+Deleting: 68		Size: 17		Height: 6
+Deleting: 101		Size: 16		Height: 6
+Deleting: 90		Size: 15		Height: 5
+163 Not Found
+15 Found
+3 Found
+561 Found
+Preorder: 202 56 15 3 4 32 22 34 71 57 102 78 342 344 561 
+Inorder: 3 4 15 22 32 34 56 57 71 78 102 202 342 344 561 
+Postorder: 4 3 22 34 32 15 57 78 102 71 56 561 344 342 202 

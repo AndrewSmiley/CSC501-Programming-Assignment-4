@@ -1,0 +1,19 @@
+Size: 25		Height: 25
+Preorder: 100 99 98 97 95 92 91 88 86 85 84 70 69 63 61 58 57 53 52 48 41 33 28 21 16 
+Inorder: 16 21 28 33 41 48 52 53 57 58 61 63 69 70 84 85 86 88 91 92 95 97 98 99 100 
+Postorder: 16 21 28 33 41 48 52 53 57 58 61 63 69 70 84 85 86 88 91 92 95 97 98 99 100 
+Deleting: 100		Size: 24		Height: 24
+Deleting: 95		Size: 23		Height: 23
+Deleting: 86		Size: 22		Height: 22
+Deleting: 69		Size: 21		Height: 21
+Deleting: 57		Size: 20		Height: 20
+Deleting: 41		Size: 19		Height: 19
+Deleting: 16		Size: 18		Height: 18
+100 Not Found
+92 Found
+84 Found
+58 Found
+41 Not Found
+Preorder: 99 98 97 92 91 88 85 84 70 63 61 58 53 52 48 33 28 21 
+Inorder: 21 28 33 48 52 53 58 61 63 70 84 85 88 91 92 97 98 99 
+Postorder: 21 28 33 48 52 53 58 61 63 70 84 85 88 91 92 97 98 99 
